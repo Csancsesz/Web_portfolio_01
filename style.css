@@ -30,15 +30,12 @@ div{
     display: block;
 }
 nav ul li{
-    display: inline;
+    display: inline-flex;
 }
-@media screen and (max-width:730px) {
-    nav ul li {
-        display: flex;
-        flex-direction: column;
-    }
-}
+
 nav ul li a{
+    width: 110px;
+    height: 44px;
     border: 2px solid #71664c;
     background-color: #ffb300;
     font-family: "Boldonse", cursive;
@@ -47,8 +44,12 @@ nav ul li a{
     box-shadow: 2px 2px black;
     padding: 5px 10px;
     margin: 10px 5px;
+    transition: transform .2s;
     text-decoration: none;
     color: #3e3630;
+}
+nav ul li a:hover{
+   transform:scale(1.2);
 }
 .text{
     font-family: "PT Serif", serif;
@@ -64,12 +65,15 @@ nav ul li a{
     font-size: 13pt;
 }
 .pfp{
-width: 200px;
-height: 300px;
-margin-left:10px;
-border: 1px solid #695b51;
-box-shadow: 3px 3px black;
-order: 2;
+    width: 200px;
+    height: 300px;
+    margin-left:10px;
+    border: 1px solid #695b51;
+    box-shadow: 3px 3px black;
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 section h2{
     display: block;
@@ -91,10 +95,24 @@ section h2{
 .animateBackground {
     animation: example 5s infinite;
   }
-
+@media screen and (max-width:730px) {
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    nav ul li a{
+      width: 85%;
+      transform: scale(0.);
+    }
+    .text{
+        font-size: 12pt;
+    }
+}
 @keyframes example {
-    0%   {background-color: #EDE8DC;}
+    0%   {background-color: #B17F59;}
     25%  {background-color: cyan;}
     50%  {background-color: pink;}
-    100% {background-color: #EDE8DC;}
+    100% {background-color: #B17F59;}
   }
