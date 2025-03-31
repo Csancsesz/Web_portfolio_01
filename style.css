@@ -93,8 +93,8 @@ section h2{
   }
 
 @keyframes example {
-    0%   {background-color: cyan;}
-    25%  {background-color: whitesmoke;}
-    50%  {background-color: #71664c;}
+    0%   {background-color: #EDE8DC;}
+    25%  {background-color: cyan;}
+    50%  {background-color: pink;}
     100% {background-color: #EDE8DC;}
   }
