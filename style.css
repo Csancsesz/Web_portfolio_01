@@ -102,6 +102,9 @@ section h2{
         flex-wrap: wrap;
         align-content: center;
     }
+    .introduction{
+        flex-direction: column;
+    }
     nav ul li a{
       width: 85%;
       transform: scale(0.);
