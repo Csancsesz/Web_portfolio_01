@@ -7,6 +7,9 @@
     border: 1.5px solid #ffe5aa;
     box-shadow: 5px 5px  black;
 }
+html {
+    scroll-behavior: smooth;
+  }
 h1{
     margin: auto;
     text-align: center;
@@ -18,13 +21,22 @@ h1{
 }
 body
 {
+    animation: none;
+    transition: background-color 1s ease;
     background-color: #B17F59;
 }
+
 div{
     display: block;
 }
 nav ul li{
     display: inline;
+}
+@media screen and (max-width:730px) {
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+    }
 }
 nav ul li a{
     border: 2px solid #71664c;
@@ -53,7 +65,7 @@ nav ul li a{
 }
 .pfp{
 width: 200px;
-height: auto;
+height: 300px;
 margin-left:10px;
 border: 1px solid #695b51;
 box-shadow: 3px 3px black;
@@ -75,3 +87,14 @@ section h2{
     flex: 1;
     order: 1;
 }
+
+.animateBackground {
+    animation: example 5s infinite;
+  }
+
+@keyframes example {
+    0%   {background-color: cyan;}
+    25%  {background-color: whitesmoke;}
+    50%  {background-color: #71664c;}
+    100% {background-color: #EDE8DC;}
+  }
