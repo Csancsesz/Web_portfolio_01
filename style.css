@@ -91,7 +91,7 @@ section h2{
     flex: 1;
     order: 1;
 }
-ul{text-decoration:none;}
+ul{list-style-type: none;}
 .animateBackground {
     animation: example 5s infinite;
   }
